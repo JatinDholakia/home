@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
@@ -50,12 +49,12 @@ const Navigation = React.forwardRef((props, ref) => {
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
             </Nav.Link>
           } */}
-          {repos.show && (
+          {about.show && (
             <Nav.Link
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#projects"}
+              href={process.env.PUBLIC_URL + "/#aboutme"}
             >
-              Projects
+              About
             </Nav.Link>
           )}
           <Nav.Link
@@ -66,12 +65,12 @@ const Navigation = React.forwardRef((props, ref) => {
           >
             Resume
           </Nav.Link>
-          {about.show && (
+          {repos.show && (
             <Nav.Link
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#aboutme"}
+              href={process.env.PUBLIC_URL + "/#projects"}
             >
-              About
+              Projects
             </Nav.Link>
           )}
           {skills.show && (
