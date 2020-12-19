@@ -1,15 +1,12 @@
 import React from "react";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import SkillsTab from "./SkillsTab";
-import Row from "react-bootstrap/Row";
 import { Jumbotron, Container } from "react-bootstrap";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
+import SkillsRow from "./SkillsRow";
 
-function Skills({ heading, hardSkills, softSkills }) {
+function Skills({ heading, programming, database,frameworks,miscellaneous}) {
   const skillsTabRef = React.useRef();
   const [isScrolled, setIsScrolled] = React.useState(false);
-  //const navbarDimensions = useResizeObserver(navbarMenuRef);
+//   const navbarDimensions = useResizeObserver(navbarMenuRef);
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
@@ -24,30 +21,22 @@ function Skills({ heading, hardSkills, softSkills }) {
         <h2 ref={skillsTabRef} className="display-4 pb-5 text-center">
           {heading}
         </h2>
-        <Tabs
-          className="skills-tabs"
-          defaultActiveKey="hard-skills"
-          id="skills-tabs"
-        >
-          <Tab
-            tabClassName="skills-tab lead"
-            eventKey="hard-skills"
-            title="Technical Skills"
-          >
-            <Row className="pt-3 px-1">
-              <SkillsTab skills={hardSkills} isScrolled={isScrolled} />
-            </Row>
-          </Tab>
-          <Tab
-            tabClassName="skills-tab lead"
-            eventKey="soft-skills"
-            title="Soft Skills"
-          >
-            <Row className="pt-3 px-1">
-              <SkillsTab skills={softSkills} isScrolled={isScrolled} />
-            </Row>
-          </Tab>
-        </Tabs>
+        <SkillsRow 
+            type="Programming"
+            skills={programming}
+        />
+        <SkillsRow
+            type="Database"
+            skills={database}
+        />
+        <SkillsRow
+            type="Frameworks"
+            skills={frameworks}
+        />
+        <SkillsRow
+            type="Miscellaneous"
+            skills={miscellaneous}
+        />
       </Container>
     </Jumbotron>
   );

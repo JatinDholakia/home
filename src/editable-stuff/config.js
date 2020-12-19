@@ -47,7 +47,7 @@ const navBar = {
     imageSize: 375,
     message:
       "Hello! I'm jatin Dholakia and I work as a Software Engineer at S&P Global. I graduated with a Bachelor's Degree from IIT Gandhinagar in 2020. My current work involves around ____. Internship. ",
-  //   resume: require("../editable-stuff/resume.pdf"),
+    resume: require("../editable-stuff/resume.pdf"),
   };
   
   // PROJECTS SECTION
@@ -86,36 +86,39 @@ const navBar = {
       height:"450"
     }
   };
-  
-  // SKILLS SECTION
   const skills = {
-    show: true,
-    heading: "Skills",
-    hardSkills: [
-      { name: "Python", value: 90 },
-      { name: "SQL", value: 75 },
-      { name: "Data Structures", value: 85 },
-      { name: "C/C++", value: 65 },
-    ],
-    softSkills: [
-      { name: "Goal-Oriented", value: 80 },
-      { name: "Collaboration", value: 90 },
-      { name: "Positivity", value: 75 },
-      { name: "Adaptability", value: 85 },
-      { name: "Problem Solving", value: 75 },
-      { name: "Empathy", value: 90 },
-      { name: "Organization", value: 70 },
-      { name: "Creativity", value: 90 },
-    ],
+      show:true,
+      heading: "Skills",
+      programming: [
+          "C/C++",
+          "Python",
+          "Java",
+          "Javascript"
+      ],
+      database: [
+          "MySQL",
+          "PostgreSQL",
+          "OracleDB"
+      ],
+      frameworks: [
+          "Spring",
+          "ReactJS",
+          "PyTorch"
+      ],
+      miscellaneous: [
+          "Docker",
+          "AWS",
+          "Google Cloud",
+          "Microservices"
+      ]
   };
-  
   // GET IN TOUCH SECTION
   const getInTouch = {
     show: true,
     heading: "Get In Touch",
     message:
-      "I'm currently looking for Software Engineering opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-    email: "dholakia98@gmail.com",
+      "If I had asked people what they wanted, they would have said faster horses.",
+    email: "mailto:dholakia98@gmail.com",
   };
   
   // Blog SECTION
