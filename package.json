@@ -10,6 +10,7 @@
     "url": "https://github.com/JatinDholakia"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^3.13.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
     "gh-pages": "^2.2.0",

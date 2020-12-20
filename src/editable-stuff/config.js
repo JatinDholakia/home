@@ -12,18 +12,32 @@ const navBar = {
     message: "Passionate about making an impact using Technology.",
     icons: [
       {
-        image: "fa-github",
+        name: "Github",
+        image: "fab fa-github",
         url: "https://github.com/JatinDholakia/",
       },
       {
-        image: "fa-linkedin",
+        name: "Linkedin",
+        image: "fab fa-linkedin",
         url: "https://www.linkedin.com/in/jatin-dholakia/",
       },
       {
-        image: "fa-twitter",
+        name: "Email",
+        image:"fas fa-envelope",
+        url: "mailto:dholakia98@gmail.com"
+      },
+      {
+        name: "Twitter",
+        image: "fab fa-twitter",
         url: "https://www.twitter.com/jatin_dholakia_/",
       },
+      {
+        name: "Medium",
+        image:"fab fa-medium",
+        url: "https://medium.com/@jatin.dholakia",
+      },
     ],
+    codeforces: "https://codeforces.com/profile/jatin_dholakia"
   };
   
   // ABOUT SECTION
@@ -68,7 +82,7 @@ const navBar = {
     show: false,
     heading: "Leadership",
     message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
+      "Write message here.",
     images: [
       { 
         img: require("../editable-stuff/jatin1.jpg"), 
@@ -117,7 +131,8 @@ const navBar = {
     show: true,
     heading: "Get In Touch",
     message:
-      "If I had asked people what they wanted, they would have said faster horses.",
+      `"If I had asked people what they wanted, they would have said faster horses."`,
+    writer: "- Henry Ford",
     email: "mailto:dholakia98@gmail.com",
   };
   

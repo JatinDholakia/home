@@ -2,9 +2,16 @@ import React from "react";
 import Typist from "react-typist";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import { Codeforces } from '@icons-pack/react-simple-icons';
 
+// Positioning CF icon
+const style1 = {
+    position: "relative",
+    bottom: "13px",
+    left: "8px"
+};
 const MainBody = React.forwardRef(
-  ({ gradient, title, message, icons }, ref) => {
+  ({ gradient, title, message, icons, codeforces }, ref) => {
     return (
       <Jumbotron
         fluid
@@ -31,20 +38,35 @@ const MainBody = React.forwardRef(
                 target="_blank"
                 rel="noopener noreferrer"
                 href={icon.url}
-                aria-label={`My ${icon.image.split("-")[1]}`}
+                aria-label={icon.name}
               >
-                <i className={`fab ${icon.image}  fa-3x socialicons`} />
+                  {/* {console.log(icon.image.split("-"[1]))} */}
+                <i className={`${icon.image}  fa-3x socialicons`} />
               </a>
             ))}
+              <a
+                key={`social-icon-5`}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={codeforces}
+                aria-label="Codeforces"
+                style={style1}
+              >
+                  <Codeforces 
+                  color="#FFFFFF"
+                  size={52}
+                  >
+                  </Codeforces>
+              </a>
           </div>
-          {/* <a
+          <a
             className="btn btn-outline-light btn-lg "
             href="#aboutme"
             role="button"
             aria-label="Learn more about me"
           >
             More about me
-          </a> */}
+          </a>
         </Container>
       </Jumbotron>
     );

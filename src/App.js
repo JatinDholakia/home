@@ -28,6 +28,7 @@ const Home = React.forwardRef((props, ref) => {
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
         message={mainBody.message}
         icons={mainBody.icons}
+        codeforces={mainBody.codeforces}
         ref={ref}
       />
       {about.show && (
@@ -82,6 +83,7 @@ const App = () => {
           <GetInTouch
             heading={getInTouch.heading}
             message={getInTouch.message}
+            writer={getInTouch.writer}
             email={getInTouch.email}
           />
         )}

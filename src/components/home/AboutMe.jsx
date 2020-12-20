@@ -1,5 +1,4 @@
 import React from "react";
-import Pdf from "../../editable-stuff/resume.pdf";
 
 import axios from "axios";
 
@@ -60,7 +59,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
                   role="button"
                   aria-label="Resume/CV"
                 >
-                  Resume
+                  See my Resume
                 </a>
               </p>
             )}
