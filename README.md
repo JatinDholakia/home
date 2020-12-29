@@ -22,6 +22,7 @@ Dependencies defined in package.json:
 | [Typist](https://github.com/jstejada/react-typist)
 | [GitHub API](https://developer.github.com/v3/repos/)
 | [Simple Icons](https://simpleicons.org/)
+| [Netlify](https://www.netlify.com/)
 
 ## Structure ⚓
 

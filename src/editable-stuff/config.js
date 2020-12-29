@@ -9,7 +9,7 @@ const navBar = {
     firstName: "Jatin",
     middleName: "",
     lastName: "Dholakia",
-    message: "Passionate about making an impact using Technology.",
+    message: "Welcome to my Website.",
     icons: [
       {
         name: "Github",
@@ -24,7 +24,7 @@ const navBar = {
       {
         name: "Email",
         image:"fas fa-envelope",
-        url: "mailto:dholakia98@gmail.com"
+        url: "mailto: dholakia98@gmail.com"
       },
       {
         name: "Twitter",
@@ -57,10 +57,10 @@ const navBar = {
   const about = {
     show: true,
     heading: "About Me",
-    imageLink: require("../editable-stuff/jatin1.jpg"),
+    imageLink: require("../editable-stuff/jatin.jpg"),
     imageSize: 375,
     message:
-      "Hello! I'm jatin Dholakia and I work as a Software Engineer at S&P Global. I graduated with a Bachelor's Degree from IIT Gandhinagar in 2020. My current work involves around ____. Internship. ",
+      "Hello! I'm Jatin Dholakia, I currently work as a Software Engineer at S&P Global. I graduated with a Bachelor's Degree from IIT Gandhinagar in 2020. In my free time, I like to do competitive programming, read books and take online courses to help me become a better developer. Feel free to reach out to know more about me.",
     resume: require("../editable-stuff/resume.pdf"),
   };
   
@@ -73,8 +73,8 @@ const navBar = {
     show: true,
     heading: "Recent Projects",
     gitHubUsername: "jatinDholakia", //i.e."johnDoe12Gh"
-    reposLength: 2,
-    specificRepos: [],
+    reposLength: 0,
+    specificRepos: ["home", "SentEmojiBot", "Codeforces", "LarsLasso"],
   };
   
   // Leadership SECTION
@@ -85,12 +85,12 @@ const navBar = {
       "Write message here.",
     images: [
       { 
-        img: require("../editable-stuff/jatin1.jpg"), 
+        img: require("../editable-stuff/jatin.jpg"), 
         label: "First slide label", 
         paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
       },
       { 
-        img: require("../editable-stuff/jatin1.jpg"), 
+        img: require("../editable-stuff/jatin.jpg"), 
         label: "Second slide label", 
         paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
       },
@@ -133,7 +133,7 @@ const navBar = {
     message:
       `"If I had asked people what they wanted, they would have said faster horses."`,
     writer: "- Henry Ford",
-    email: "mailto:dholakia98@gmail.com",
+    email: "dholakia98@gmail.com",
   };
   
   // Blog SECTION

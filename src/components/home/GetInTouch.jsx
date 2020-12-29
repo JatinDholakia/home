@@ -14,7 +14,7 @@ const GetInTouch = ({ heading, message, writer, email }) => {
         <p className="lead text-center">{writer}</p> 
       </div>
       <div className="pb-3">
-      <a href={`mailto:${email}`}>
+      <a href={`mailto: ${email}`}>
           <i className="fas fa-envelope fa-2x"></i>
       </a>
       </div>
