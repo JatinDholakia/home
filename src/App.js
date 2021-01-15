@@ -82,34 +82,14 @@ const Home = React.forwardRef(() => {
   );
 });
 const App = () => {
-    // const titleRef = React.useRef();
     return (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={() => <Home/>} />
-            <Route exact path="/corrector" component={Corrector} />
+            <Route path="/corrector" component={Corrector} />
         </Switch>
     </BrowserRouter>
     );
 };
-//   return (
-//     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
-//       {navBar.show && <Navbar ref={titleRef} />}
-//       <Route path="/" exact component={() => <Home ref={titleRef} />} />
-//       {/* {false && <Route path="/blog" exact component={Blog} />}
-//       {false && <Route path="/blog/:id" component={BlogPost} />} */}
-//       <Footer>
-//         {getInTouch.show && (
-//           <GetInTouch
-//             heading={getInTouch.heading}
-//             message={getInTouch.message}
-//             writer={getInTouch.writer}
-//             email={getInTouch.email}
-//           />
-//         )}
-//       </Footer>
-//     </BrowserRouter>
-//   );
-
 
 export default App;
