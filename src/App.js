@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import {
   navBar,
   mainBody,
@@ -15,21 +15,24 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
+import Corrector from "./components/Corrector";
 // import { Blog } from "./components/blog/Blog";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
 
-const Home = React.forwardRef((props, ref) => {
+const Home = React.forwardRef(() => {
+    const titleRef = React.useRef();
   return (
     <>
+      {navBar.show && <Navbar ref={titleRef} />}
       <MainBody
         gradient={mainBody.gradientColors}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
         message={mainBody.message}
         icons={mainBody.icons}
         codeforces={mainBody.codeforces}
-        ref={ref}
+        ref={titleRef}
       />
       {about.show && (
         <AboutMe
@@ -65,20 +68,7 @@ const Home = React.forwardRef((props, ref) => {
           miscellaneous={skills.miscellaneous}
         />
       )}
-    </>
-  );
-});
-
-const App = () => {
-  const titleRef = React.useRef();
-
-  return (
-    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
-      {navBar.show && <Navbar ref={titleRef} />}
-      <Route path="/" exact component={() => <Home ref={titleRef} />} />
-      {/* {false && <Route path="/blog" exact component={Blog} />}
-      {false && <Route path="/blog/:id" component={BlogPost} />} */}
-      <Footer>
+        <Footer>
         {getInTouch.show && (
           <GetInTouch
             heading={getInTouch.heading}
@@ -87,9 +77,39 @@ const App = () => {
             email={getInTouch.email}
           />
         )}
-      </Footer>
-    </BrowserRouter>
+        </Footer>
+    </>
   );
+});
+const App = () => {
+    // const titleRef = React.useRef();
+    return (
+    <BrowserRouter>
+        <Switch>
+            <Route exact path="/" component={() => <Home/>} />
+            <Route exact path="/corrector" component={Corrector} />
+        </Switch>
+    </BrowserRouter>
+    );
 };
+//   return (
+//     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+//       {navBar.show && <Navbar ref={titleRef} />}
+//       <Route path="/" exact component={() => <Home ref={titleRef} />} />
+//       {/* {false && <Route path="/blog" exact component={Blog} />}
+//       {false && <Route path="/blog/:id" component={BlogPost} />} */}
+//       <Footer>
+//         {getInTouch.show && (
+//           <GetInTouch
+//             heading={getInTouch.heading}
+//             message={getInTouch.message}
+//             writer={getInTouch.writer}
+//             email={getInTouch.email}
+//           />
+//         )}
+//       </Footer>
+//     </BrowserRouter>
+//   );
+
 
 export default App;
