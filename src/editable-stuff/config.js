@@ -74,7 +74,7 @@ const navBar = {
     heading: "Recent Projects",
     gitHubUsername: "jatinDholakia", //i.e."johnDoe12Gh"
     reposLength: 0,
-    specificRepos: ["home", "SentEmojiBot", "Codeforces", "LarsLasso"],
+    specificRepos: ["home", "SentEmojiBot", "Codeforces", "Spelling-Correction"],
   };
   
   // Leadership SECTION
@@ -104,23 +104,23 @@ const navBar = {
       show:true,
       heading: "Skills",
       programming: [
-          "C/C++",
-          "Python",
           "Java",
-          "Javascript"
-      ],
-      database: [
-          "MySQL",
-          "PostgreSQL",
-          "OracleDB"
+          "SQL",
+          "Python",
+          "C++"
       ],
       frameworks: [
           "Spring",
-          "ReactJS",
-          "PyTorch"
+          "Flask",
+          "PyTorch",
+          "Tensorflow"
+      ],
+      tools: [
+          "Git",
+          "MySQL",
+          "PostgreSQL"
       ],
       miscellaneous: [
-          "Docker",
           "AWS",
           "Google Cloud",
           "Microservices"

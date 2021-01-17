@@ -63,8 +63,8 @@ const Home = React.forwardRef(() => {
         <Skills
           heading={skills.heading}
           programming={skills.programming}
-          database={skills.database}
           frameworks={skills.frameworks}
+          tools={skills.tools}
           miscellaneous={skills.miscellaneous}
         />
       )}
