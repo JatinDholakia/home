@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 class Corrector extends Component {
     constructor() {
         super();
-        this.apiURL = "https://cors-anywhere.herokuapp.com/https://fidsi6hi34.execute-api.us-east-1.amazonaws.com/test/demoapi"
+        this.apiURL = "https://fidsi6hi34.execute-api.us-east-1.amazonaws.com/test/demoapi"
         this.state = {
             edit_distance_1: '',
             edit_distance_2: '',

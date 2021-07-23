@@ -20,6 +20,7 @@ import Corrector from "./components/Corrector";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
+import Books from "./components/Books";
 
 const Home = React.forwardRef(() => {
     const titleRef = React.useRef();
@@ -87,6 +88,7 @@ const App = () => {
         <Switch>
             <Route exact path="/" component={() => <Home/>} />
             <Route path="/corrector" component={Corrector} />
+            <Route path="/books" component={Books} />
         </Switch>
     </BrowserRouter>
     );
