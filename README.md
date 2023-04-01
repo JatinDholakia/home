@@ -1,10 +1,10 @@
 <p align="center">
   <h1 align="center">Jatin Dholakia's Personal Website ✨</h1>
   <p align="center">
-    The personal website/portfolio of Jatin Dholakia, hosted with Netlify. Built using React and Bootstrap.
+    The personal website/portfolio of Jatin Dholakia. Built using React and Bootstrap.
     <br />
      Site URL: 
-    <a href="https://jatin.work">jatin.work</a>
+    <a href="https://jatindholakia.github.io">jatindholakia.github.io</a>
     <br />
   </p>
 </p>
