@@ -1,0 +1,256 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+% Github : https://github.com/sb2nov/resume/blob/master/sourabh_bajaj_resume.tex
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItemWithTitle}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeItem}[1]{
+    \item\small{
+        {#1 \vspace{-2pt}}
+    }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeProject}[1]{
+  \vspace{-1pt}\item{#1}
+    \vspace{-5pt}
+}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{{\Large Jatin Dholakia}} & Email : \href{mailto:dholakia98@gmail.com}{dholakia98@gmail.com}\\
+    \href{https://jatindholakia.github.io}{https://jatindholakia.github.io} & Linkedin : \href{https://www.linkedin.com/in/jatin-dholakia/}{jatin-dholakia} \\
+    
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Indian Institute of Technology, Gandhinagar}{CGPA: 8.24}
+        {B.Tech - Electrical Engineering with Minor in Computer Science}{2016 - 2020}
+    % \resumeSubheading
+    %     {Shiv Jyoti Convent School}{91.8 \%}
+    %     {12\textsuperscript{th} CBSE}{2015 - 2016}
+    % \resumeSubheading
+    %     {Nand Vidya Niketan}{CGPA: 10.0}
+    %     {10\textsuperscript{th} CBSE}{2013 - 2014}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Enphase Energy}{}
+      {Senior Software Engineer}{July 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{Designed and lead the development for a \textbf{Notification Service}. Used asynchronous messaging (using SQS) between API servers and notification service. The notifications are filtered based on user preferences. Implemented for Email and in-app notifications. Handled on-click by sending redirect link in JSON payload.}
+        \resumeItem{Improved performance of the most used API ($\sim$15 rps) of the team. P95 latency reduced from 800 ms to 200 ms. This was done by introducing a caching layer for RBAC list and improving API logic to remove redundant queries.}
+        \resumeItem{Implemented a protocol (OpenADR) that uses \textbf{mutual TLS} for authentication in a server to server communication.}
+      \resumeItemListEnd
+      \resumeSubSubheading{Software Engineer}{April 2021 - June 2022}
+            \resumeItemListStart
+        \resumeItem
+        {Designed and implemented \textbf{Dynamic Form} that stored meta information about a program’s form. The form’s properties such as field type, validations, ordering, default value  etc.  can be configured by admin. This reduced the onboarding time for new partners.}
+        \resumeItem
+          {Implemented \textbf{Scheduler Locking} to restrict cron jobs to execute only in one node. This is achieved by having a shared database across worker nodes so that lock is acquired by exactly one of them.}
+        \resumeItem
+          {Implemented sorting, filtering and pagination in REST APIs used by frontend.}
+      \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {S\&P Global}{}
+      {Software Development Engineer}{August 2020 - March 2021}
+      \resumeItemListStart
+        \resumeItem
+          {Worked on an internal tool which is used to entitle packages to users. It is built using Spring framework and
+uses MVC architecture.}
+        \resumeItem
+          {Added new feed of data into the tool which increased the packages offered.}
+        \resumeItem
+          {Worked on API drive link which runs a scheduler on input files, calls API and places output file in client's outbox folder.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Quantiphi Analytics}{}
+      {Platform Engineering Intern}{May 2019 - July 2019}
+      \resumeItemListStart
+        \resumeItem
+          {Built a data-pipeline for a retail company to forecast its sales based on past data, using Google Cloud Platform.}
+        \resumeItem
+          {Orchestrated various pre-processing and post-processing tasks into the pipeline using Cloud Composer which runs on a Kubernetes cluster.}
+        % \resumeItem
+        %     {Built a backend web-application using Flask, which served the API calls made by the user.}
+        \resumeItem
+            {Used AutoML Tables to generate predictions on back test splits and evaluate metrics.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProject{\textbf{SentEmoji - Empathetic Conversation Generation:} \href{https://github.com/JatinDholakia/SentEmojiBot}{\color{blue}Github     }}
+            \resumeItemListStart
+                \resumeItem
+                {Published in \href{https://dl.acm.org/doi/abs/10.1145/3371158.3371218}{\color{blue}25\textsuperscript{th} CODS-COMAD} (2020) - International Conference on Data Science and Management of Data.}
+                \resumeItem
+                {Developed a chatbot that generated empathetic \textbf{responses with emojis} to the given context}
+                \resumeItem
+                {Used architectures like Transformer encoder and BERT. Used word2vec and emoji2vec to assign emojis to sentences and CNN model to identify the emotion of generated sentence.}
+            \resumeItemListEnd
+        \resumeProject{\textbf{Recipes} \href{https://github.com/JatinDholakia/Recipes} {\color{blue}Github}}
+            \resumeItemListStart
+                \resumeItem
+                {Multi-user web service with Spring Boot that allows storing, retrieving, updating and deleting recipes.}
+                \resumeItem
+                {Built using Spring Boot, Spring Security, Spring Data JPA and uses MySQL database.}
+            \resumeItemListEnd
+        \resumeProject{\textbf{Real Word Spelling Correction} Demo \href{https://github.com/JatinDholakia/Spelling-Correction}{\color{blue}Github} \href{https://medium.com/analytics-vidhya/real-word-spell-correction-c64a3a02c64d}{\color{blue}Article}}
+            \resumeItemListStart
+                \resumeItem
+                {Correction of sentence based on context, even if an out-of-dictionary word is not present. \textbf{Bigram language model} is used to compute probabilities of all candidate sentences using a metric like \textbf{edit distance}.}
+                \resumeItem
+                {Used AWS Lambda and API Gateway to deploy as an API. Created a form for taking input and making requests.}
+            \resumeItemListEnd
+%         \resumeProject{\textbf{Reinforcement Learning for Games} \href{https://github.com/JatinDholakia/Reinforcement-Learning-for-Games}{\color{blue}Github}}
+%             \resumeItemListStart
+%                 \resumeItem
+%                 {Explored the performance of algorithms like Q-Learning, Deep Q-Learning and CNN based Deep Q-Learning on games
+% with varying number of states.}
+%                 \resumeItem
+%                 {Understood the trade-off  between exploration and exploitation in large MDPs. Trained agent using epsilon-greedy policy.}
+%                 \resumeItem
+%                 {Achieved an average score of 1200 on the classic game Pacman, which was close to the human-level performance of 1500.}
+            % \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%----------------ACHIEVEMENTS-----------------%
+
+% \section{Achievements}
+%     \resumeItemListStart
+%         \resumeItem
+%         {Awarded \textbf{Dean's list} for excellent academic performance in Semester 6 \& 7}
+        % \resumeItem
+        % {Qualified for second round of Jumpstart ( Hackathon) , from over \textbf{1400 participants}.}
+        % \resumeItem
+        % {Rated \textbf{Specialist} on Codeforces - a Competitive Programming Website}
+        % \resumeItem
+        % {Secured a rank of \textbf{2548} ( ranked in top 0.2\% of candidates) in \textbf{JEE Advanced (IIT-JEE)}}
+        % \resumeItem
+        % {Awarded \textbf{Certificate of Merit} (by CBSE) for obtaining A1 grade in all the 5 subjects in 10\textsuperscript{th} standard.}
+
+
+
+% --------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Java, C++, Python}
+     \hfill
+     \textbf{Technologies}{: AWS, Spring, MongoDB, Redis, Kubernetes, Git}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
