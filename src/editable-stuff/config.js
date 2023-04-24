@@ -37,7 +37,8 @@ const navBar = {
         url: "https://medium.com/@jatin.dholakia",
       },
     ],
-    codeforces: "https://codeforces.com/profile/jatin_dholakia"
+    codeforces: "https://codeforces.com/profile/jatin_dholakia",
+    leetcode: "https://leetcode.com/jatin_dholakia"
   };
   
   // ABOUT SECTION
@@ -60,8 +61,8 @@ const navBar = {
     imageLink: require("../editable-stuff/jatin.jpg"),
     imageSize: 375,
     message:
-      "Hello! I'm Jatin Dholakia, I currently work as a Software Engineer at Enphase Energy. I graduated with a Bachelor's Degree from IIT Gandhinagar in 2020. In my free time, I like to do competitive programming, read books and take online courses to help me become a better developer. Feel free to reach out to know more about me.",
-    resume: require("../editable-stuff/resume.pdf"),
+      "Hello! I'm Jatin Dholakia, I currently work as a Senior Software Engineer at Enphase Energy. I graduated with a Bachelor's Degree from IIT Gandhinagar in 2020. In my free time, I like to do competitive programming, read books and take online courses to help me become a better developer. Feel free to reach out to know more about me.",
+    resume: require("../editable-stuff/Jatin-Dholakia.pdf"),
   };
   
   // PROJECTS SECTION

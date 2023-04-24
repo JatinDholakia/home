@@ -29,7 +29,7 @@ Dependencies defined in package.json:
 - Navigation bar
 - Body
   - Name
-  - Github / Linkedin / Email / Twitter / Medium / Codeforces
+  - Github / Linkedin / Email / Twitter / Medium / Codeforces / Leetcode
   - Resume | About me
 - About Me
   - Display picture
@@ -60,7 +60,7 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 3. Open in editor and edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) file.
 
-4. Add your resume as <resume.pdf> in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
+4. Add your resume in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
 5. Change URL in [package.json](./package.json) file:
 
    ```json

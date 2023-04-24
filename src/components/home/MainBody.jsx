@@ -2,7 +2,8 @@ import React from "react";
 import Typist from "react-typist";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import { Codeforces } from '@icons-pack/react-simple-icons';
+// import { Codeforces } from '@icons-pack/react-simple-icons';
+import { Leetcode } from "@icons-pack/react-simple-icons";
 
 // Positioning CF icon
 const style1 = {
@@ -11,7 +12,7 @@ const style1 = {
     left: "8px"
 };
 const MainBody = React.forwardRef(
-  ({ gradient, title, message, icons, codeforces }, ref) => {
+  ({ gradient, title, message, icons, codeforces, leetcode }, ref) => {
     return (
       <Jumbotron
         fluid
@@ -44,7 +45,7 @@ const MainBody = React.forwardRef(
                 <i className={`${icon.image}  fa-3x socialicons`} />
               </a>
             ))}
-              <a
+              {/* <a
                 key={`social-icon-5`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,6 +58,20 @@ const MainBody = React.forwardRef(
                   size={52}
                   >
                   </Codeforces>
+              </a> */}
+              <a
+                key = {`social-icon-6`}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={leetcode}
+                aria-label="Leetcode"
+                style={style1}
+                >
+                  <Leetcode
+                  color="#FFFFFF"
+                  size={45}
+                  >
+                  </Leetcode>
               </a>
           </div>
           <a

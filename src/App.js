@@ -33,6 +33,7 @@ const Home = React.forwardRef(() => {
         message={mainBody.message}
         icons={mainBody.icons}
         codeforces={mainBody.codeforces}
+        leetcode={mainBody.leetcode}
         ref={titleRef}
       />
       {about.show && (
