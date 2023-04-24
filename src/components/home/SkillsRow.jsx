@@ -3,7 +3,7 @@ import React from "react";
 function SkillsRow({type, skills}){
     return(
     <div className="row mb-3">
-        <div className="col-md-3 text-center">
+        <div className="col-md-2 text-center">
             <p className = "h3 lead">{type}</p>
         </div>
         {skills.map(skill =>(

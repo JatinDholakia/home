@@ -65,9 +65,10 @@ const Home = React.forwardRef(() => {
         <Skills
           heading={skills.heading}
           programming={skills.programming}
-          frameworks={skills.frameworks}
-          tools={skills.tools}
-          miscellaneous={skills.miscellaneous}
+          // frameworks={skills.frameworks}
+          // tools={skills.tools}
+          // miscellaneous={skills.miscellaneous}
+          technologies={skills.technologies}
         />
       )}
         <Footer>

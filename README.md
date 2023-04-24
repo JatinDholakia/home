@@ -29,7 +29,7 @@ Dependencies defined in package.json:
 - Navigation bar
 - Body
   - Name
-  - Github / Linkedin / Email / Twitter / Medium / Codeforces / Leetcode
+  - Github / Linkedin / Email / Twitter / Medium / Leetcode
   - Resume | About me
 - About Me
   - Display picture
@@ -38,9 +38,9 @@ Dependencies defined in package.json:
 - Recent Projects (using GitHub API)
 - Skills
   - Programming Skills
-  - Database
-  - Frameworks
-  - Miscellaneous
+  <!-- - Database -->
+  <!-- - Frameworks -->
+  <!-- - Miscellaneous -->
 - Footer
   - Quote
   - Email

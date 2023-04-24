@@ -3,7 +3,7 @@ import { Jumbotron, Container } from "react-bootstrap";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import SkillsRow from "./SkillsRow";
 
-function Skills({ heading, programming, frameworks, tools,miscellaneous}) {
+function Skills({ heading, programming, frameworks, tools,miscellaneous, technologies}) {
   const skillsTabRef = React.useRef();
   const [isScrolled, setIsScrolled] = React.useState(false);
 //   const navbarDimensions = useResizeObserver(navbarMenuRef);
@@ -25,7 +25,7 @@ function Skills({ heading, programming, frameworks, tools,miscellaneous}) {
             type="Programming"
             skills={programming}
         />
-        <SkillsRow
+        {/* <SkillsRow
             type="Frameworks"
             skills={frameworks}
         />
@@ -36,7 +36,11 @@ function Skills({ heading, programming, frameworks, tools,miscellaneous}) {
         <SkillsRow
             type="Miscellaneous"
             skills={miscellaneous}
-        />
+        /> */
+        <SkillsRow
+        	type="Technologies"
+			skills={technologies}
+		/>}
       </Container>
     </Jumbotron>
   );

@@ -106,13 +106,12 @@ const navBar = {
       heading: "Skills",
       programming: [
           "Java",
-          "SQL",
-          "Python",
-          "C++"
+          "C++",
+          "Python"
       ],
       frameworks: [
           "Spring",
-          "Flask",
+          "REST",
           "PyTorch",
           "Tensorflow"
       ],
@@ -125,6 +124,13 @@ const navBar = {
           "AWS",
           "Google Cloud",
           "Microservices"
+      ],
+      technologies: [
+          "AWS",
+          "Spring",
+          "MongoDB",
+          "Redis",
+          "MySQL"
       ]
   };
   // GET IN TOUCH SECTION
