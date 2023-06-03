@@ -61,7 +61,7 @@ const navBar = {
     imageLink: require("../editable-stuff/jatin.jpg"),
     imageSize: 375,
     message:
-      "Hello! I'm Jatin Dholakia, I currently work as a Senior Software Engineer at Enphase Energy. I graduated with a Bachelor's Degree from IIT Gandhinagar in 2020. In my free time, I like to do competitive programming, read books and take online courses to help me become a better developer. Feel free to reach out to know more about me.",
+      "Hello! I'm Jatin Dholakia, I currently work as a Senior Software Engineer at Enphase Energy. I graduated with a Bachelor's Degree from IIT Gandhinagar in 2020. I have experience in building and scaling backend microservices. Feel free to reach out to know more about me.",
     resume: require("../editable-stuff/Jatin-Dholakia.pdf"),
   };
   
