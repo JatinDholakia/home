@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, HashRouter } from "react-router-dom";
 import SwaggerUI from "swagger-ui-react";
 import "swagger-ui-react/swagger-ui.css";
 import {
@@ -90,14 +90,14 @@ const Home = React.forwardRef(() => {
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={() => <Home/>} />
-        <Route path="/corrector" component={Corrector} />
-        <Route path="/books" component={Books} />
-        <Route path="/news-feed/swagger-ui" component={() => <SwaggerUI spec= {newsFeedApp} />} />
-      </Switch>
-    </BrowserRouter>
+    <HashRouter basename = "/">
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/corrector" element={Corrector} />
+        <Route path="/books" element={Books} />
+        <Route path="/news-feed/swagger-ui" element={<SwaggerUI spec= {newsFeedApp} />} />
+      </Routes>
+    </HashRouter>
   );
 };
 

@@ -4,6 +4,7 @@ import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
+import { HashLink } from "react-router-hash-link";
 
 const Navigation = React.forwardRef((props, ref) => {
   // const { showBlog, FirstName } = config;
@@ -39,9 +40,9 @@ const Navigation = React.forwardRef((props, ref) => {
       }`}
       expand="lg"
     >
-      <Navbar.Brand className="brand" href={process.env.PUBLIC_URL + "/#home"}>
+      <HashLink className="brand" to={"#home"}>
         {`<${mainBody.firstName} />`}
-      </Navbar.Brand>
+      </HashLink>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -51,12 +52,13 @@ const Navigation = React.forwardRef((props, ref) => {
             </Nav.Link>
           } */}
           {about.show && (
-            <Nav.Link
+            <HashLink
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#aboutme"}
+              to={'#aboutme'}
+              // href={process.env.PUBLIC_URL + "/#aboutme"}
             >
               About
-            </Nav.Link>
+            </HashLink>
           )}
           <Nav.Link
             className="nav-link lead"
@@ -67,20 +69,22 @@ const Navigation = React.forwardRef((props, ref) => {
             Resume
           </Nav.Link>
           {repos.show && (
-            <Nav.Link
+            <HashLink
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#projects"}
+              to={'#projects'}
+              // href={process.env.PUBLIC_URL + "/#projects"}
             >
               Projects
-            </Nav.Link>
+            </HashLink>
           )}
           {skills.show && (
-            <Nav.Link
+            <HashLink
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#skills"}
+              // href={process.env.PUBLIC_URL + "/#skills"}
+              to={"#skills"}
             >
               Skills
-            </Nav.Link>
+            </HashLink>
           )}
         </Nav>
       </Navbar.Collapse>

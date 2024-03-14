@@ -54,6 +54,13 @@ code {
 }
 .brand {
   color: #363636 !important;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
 }
 .nav-link {
   transition: color, 0.2s;
