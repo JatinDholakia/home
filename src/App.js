@@ -1,5 +1,7 @@
 import React from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
+import SwaggerUI from "swagger-ui-react";
+import "swagger-ui-react/swagger-ui.css";
 import {
   navBar,
   mainBody,
@@ -21,9 +23,10 @@ import Corrector from "./components/Corrector";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
 import Books from "./components/Books";
+import newsFeedApp from "./editable-stuff/news-feed-swagger.json"
 
 const Home = React.forwardRef(() => {
-    const titleRef = React.useRef();
+  const titleRef = React.useRef();
   return (
     <>
       {navBar.show && <Navbar ref={titleRef} />}
@@ -65,13 +68,13 @@ const Home = React.forwardRef(() => {
         <Skills
           heading={skills.heading}
           programming={skills.programming}
-          // frameworks={skills.frameworks}
+// frameworks={skills.frameworks}
           // tools={skills.tools}
           // miscellaneous={skills.miscellaneous}
           technologies={skills.technologies}
         />
       )}
-        <Footer>
+      <Footer>
         {getInTouch.show && (
           <GetInTouch
             heading={getInTouch.heading}
@@ -80,20 +83,22 @@ const Home = React.forwardRef(() => {
             email={getInTouch.email}
           />
         )}
-        </Footer>
+      </Footer>
     </>
   );
 });
+
 const App = () => {
-    return (
+  return (
     <BrowserRouter>
-        <Switch>
-            <Route exact path="/" component={() => <Home/>} />
-            <Route path="/corrector" component={Corrector} />
-            <Route path="/books" component={Books} />
-        </Switch>
+      <Switch>
+        <Route exact path="/" component={() => <Home/>} />
+        <Route path="/corrector" component={Corrector} />
+        <Route path="/books" component={Books} />
+        <Route path="/news-feed/swagger-ui" component={() => <SwaggerUI spec= {newsFeedApp} />} />
+      </Switch>
     </BrowserRouter>
-    );
+  );
 };
 
 export default App;
