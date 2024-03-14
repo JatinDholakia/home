@@ -104,7 +104,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{{\Large Jatin Dholakia}} & Email : \href{mailto:dholakia98@gmail.com}{dholakia98@gmail.com}\\
-    \href{http://jatin.work}{http://jatin.work} & Linkedin : \href{https://www.linkedin.com/in/jatin-dholakia/}{jatin-dholakia} \\ {} & Phone : \href{Tel:+91-9825220302}{+91-9825220302}
+    \href{http://jatin.work}{http://jatin.work} & Linkedin : \href{https://www.linkedin.com/in/jatin-dholakia/}{jatin-dholakia} \\ \href{https://leetcode.com/jatin_dholakia}{https://leetcode.com/jatin\_dholakia} & Phone : \href{Tel:+91-9825220302}{+91-9825220302}
     
 \end{tabular*}
 
@@ -133,7 +133,7 @@
       {Senior Software Engineer}{July 2022 - Present}
       \resumeItemListStart
         \resumeItem{Designed and lead the development for a \textbf{Notification Service}. Used asynchronous messaging (using SQS) between API servers and notification service. The notifications are filtered based on user preferences. Implemented for Email and in-app notifications. Handled on-click by sending redirect link in JSON payload.}
-        \resumeItem{Improved performance of the most used API ($\sim$15 rps) of the team. P95 latency reduced from 800 ms to 200 ms. This was done by introducing a caching layer for RBAC list and improving API logic to remove redundant queries.}
+        \resumeItem{Improved performance of the most used API ($\sim$200 rps) of the team. P95 latency reduced from 800 ms to 200 ms. This was done by introducing a caching layer for RBAC list and improving API logic to remove redundant queries.}
         \resumeItem{Implemented a protocol (OpenADR) that uses \textbf{mutual TLS} for authentication in a server to server communication.}
       \resumeItemListEnd
       \resumeSubSubheading{Software Engineer}{April 2021 - June 2022}
@@ -142,8 +142,6 @@
         {Designed and implemented \textbf{Dynamic Form} that stored meta information about a program’s form. The form’s properties can be configured by admin. This reduced the onboarding time for new partners.}
         \resumeItem
           {Implemented \textbf{Scheduler Locking} to restrict cron jobs to execute only in one node. This is achieved by having a shared database across worker nodes so that lock is acquired by exactly one of them.}
-        \resumeItem
-          {Implemented sorting, filtering and pagination in REST APIs used by frontend.}
       \resumeItemListEnd
       
 % --------Multiple Positions Heading------------
@@ -176,7 +174,7 @@ uses MVC architecture.}
         \resumeItem
           {Built a data-pipeline for a retail company to forecast its sales based on past data, using Google Cloud Platform.}
         \resumeItem
-          {Orchestrated various pre-processing and post-processing tasks into the pipeline using Cloud Composer which runs on a Kubernetes cluster.}
+          {Orchestrated various pre-processing and post-processing tasks into the pipeline using Cloud Composer.}
         % \resumeItem
         %     {Built a backend web-application using Flask, which served the API calls made by the user.}
         \resumeItem
@@ -198,19 +196,21 @@ uses MVC architecture.}
                 \resumeItem
                 {Used architectures like Transformer encoder and BERT. Used word2vec and emoji2vec to assign emojis to sentences and CNN model to identify the emotion of generated sentence.}
             \resumeItemListEnd
-        \resumeProject{\textbf{Recipes} \href{https://github.com/JatinDholakia/Recipes} {\color{blue}Github}}
+        \resumeProject{\textbf{News Feed} \href{https://github.com/JatinDholakia/News-Feed} {\color{blue}Github}}
             \resumeItemListStart
                 \resumeItem
-                {Multi-user web service with Spring Boot that allows storing, retrieving, updating and deleting recipes.}
+                {News Feed service to show posts to followers based on interests and geo-location.} 
                 \resumeItem
-                {Built using Spring Boot, Spring Security, Spring Data JPA and uses MySQL database.}
+                {Users can like and comment on posts which improves its rank in the feed.}
+                \resumeItem
+                {Built using Spring Boot, MySQL, Neo4J Graph DB and Redis Cache}
             \resumeItemListEnd
         \resumeProject{\textbf{Real Word Spelling Correction} \href{https://github.com/JatinDholakia/Spelling-Correction}{\color{blue}Github} \href{https://medium.com/analytics-vidhya/real-word-spell-correction-c64a3a02c64d}{\color{blue}Article}}
             \resumeItemListStart
                 \resumeItem
                 {Correction of sentence based on context, even if an out-of-dictionary word is not present. \textbf{Bigram language model} is used to compute probabilities of all candidate sentences using a metric like \textbf{edit distance}.}
                 \resumeItem
-                {Used AWS Lambda and API Gateway to deploy as an API. Created a form for taking input and making requests.}
+                {Used AWS Lambda and API Gateway to deyploy as an API. Created a form for taking input and making requests.}
             \resumeItemListEnd
 %         \resumeProject{\textbf{Reinforcement Learning for Games} \href{https://github.com/JatinDholakia/Reinforcement-Learning-for-Games}{\color{blue}Github}}
 %             \resumeItemListStart
@@ -247,7 +247,7 @@ uses MVC architecture.}
    \item{
      \textbf{Languages}{: Java, C++, Python}
      \hfill
-     \textbf{Technologies}{: AWS, Spring, MongoDB, Redis, Kubernetes, Git}
+     \textbf{Technologies}{: AWS, Spring Boot, MongoDB, Redis, Kubernetes, Git}
    }
  \resumeSubHeadingListEnd
 

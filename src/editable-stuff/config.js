@@ -75,7 +75,7 @@ const navBar = {
     heading: "Recent Projects",
     gitHubUsername: "jatinDholakia", //i.e."johnDoe12Gh"
     reposLength: 0,
-    specificRepos: ["home", "SentEmojiBot", "Codeforces", "Spelling-Correction"],
+    specificRepos: ["News-Feed", "SentEmojiBot", "Codeforces", "Spelling-Correction"],
   };
   
   // Leadership SECTION
