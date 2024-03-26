@@ -4,7 +4,7 @@
     The personal website/portfolio of Jatin Dholakia. Built using React and Bootstrap.
     <br />
      Site URL: 
-    <a href="https://jatindholakia.github.io">jatindholakia.github.io</a>
+    <a href="http://jatin.work">jatin.work</a>
     <br />
   </p>
 </p>
