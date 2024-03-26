@@ -93,8 +93,8 @@ const App = () => {
     <HashRouter basename = "/">
       <Routes>
         <Route exact path="/" element={<Home/>} />
-        <Route path="/corrector" element={<Corrector />} />
-        <Route path="/books" element={<Books />} />
+        <Route path="/corrector" element={<Corrector/>} />
+        <Route path="/books" element={<Books/>} />
         <Route path="/news-feed/swagger-ui" element={<SwaggerUI spec= {newsFeedApp} />} />
       </Routes>
     </HashRouter>
